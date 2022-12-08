@@ -1,6 +1,6 @@
 {
   "name": "@wuzhiqin/vue3-hooks",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "vue3 hooks by wuzhiqin",
   "main": "src/main.js",
   "type": "module",
