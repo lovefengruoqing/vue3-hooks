@@ -30,7 +30,10 @@ export const useCesium = (container = document.createElement("div"), option = {}
   let viewer = new Viewer(container, config)
 
   onUnmounted(() => {
+    const gl = viewer.scene.context._originalGLContext;
     viewer.destroy();
+    gl.getExtension("WEBGL_lose_context").loseContext();
+    gl = null;
   });
 
   return { viewer };
